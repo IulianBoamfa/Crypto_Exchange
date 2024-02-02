@@ -1,64 +1,51 @@
-# Crypto_Exchange
-This is a project designed using GUI, illustrating a Crypto Exchange.
+# Crypto Exchange
 
-All the data is stored into the MySQL database directly from Python, the prices are scarpped in real time from the websites specified under this line
-and updated every 10 seconds so the GUI will display the real prices and the real value of the portofolio in real time.
-The project design is described in the UML Diagram file where I made a diagram illustrating the logic of this project using UML Diagram program.
+## Project Overview
+Crypto Exchange is a sophisticated graphical user interface (GUI) project that emulates a real Crypto Exchange. It offers users a seamless experience of trading cryptocurrencies, gold, and silver in real-time. All data is efficiently managed, and prices are scraped from reputable sources, ensuring that users have access to up-to-date market information. The project's logic and architecture are meticulously represented in a UML diagram for clarity.
 
-Task description:
-The “Investment Trading Platform” contains the following:
+## Key Features
 
-a) Open an account.
-b) Invest
-c) Portfolio Viewing
-d) Deposit/Withdraw
+### Client-Side Functionalities
+- **Open an Account**
+  - Users can create an account with a simple username and password.
+  - User account details are securely stored in a MySQL database.
+  - Users can specify their initial investment amount, enhancing the trading experience.
+  - User can perform Deposit/Withdrawal actions.  
+  - Each user is assigned a unique client ID for identification.
 
-Server:
-a) user account information
-b) user portfolio information
-c) price information
-(Web scaped current prices of:
-Crypto: https://coinranking.com/,
-gold: https://finance.yahoo.com/quote/GC%3DF?p=GC%3DF, and
-silver: https://finance.yahoo.com/quote/SI%3DF?p=SI%3DF)
+- **Investment Options**
+  - Users can explore a wide variety of investment options, including cryptocurrencies, gold, and silver, along with their current prices.
+  - Investments can be based on the available funds or the desired quantity of the asset.
+  - Buy or sell transactions can be executed.
+  - The system ensures that there are sufficient funds for buying transactions and available assets for selling transactions.
+  - Transactions can be canceled, edited, or confirmed with details such as asset name, date, buy/sell option, quantity, and cost.
 
-Description of each client functionalities:
-a) The ‘Open account’ option should allow the user to:
-Create simple log in system with username and password. All the details are stored into the MySQL database.
-Add ‘cash to invest’ option where user can enter the initial value of money they will add into
-the account.
-Return client ID number (store the user account details)
-Then welcome window/message specifying client ID, total investment value, total cash to
-invest, total gain/loss and three options to choose from:
-a. Investment now.
-b. Portfolio Viewing
-c. Pay in /withdraw.
-b) The ‘Invest now’ option allow the user to:
-- view list of Investment types (names and prices information)
-- choose one, based on amount of money to invest or quantity of the specific investment.
-a. Enter the value and calculate accordingly.
-Choose between buy or sell.
-b. When buying check for sufficient amount of money and if the total cash will allow
-proceed in creating the buy transaction:
-c. When selling the system should check the current investment for availability and if
-allow proceed in creating the sell transaction
-d. Both options will generate transaction:
-i. The transaction should allow the user to cancel, edit or confirm and pay.
-1. cancel – will ask for confirmation and return into the welcome window
-2. confirm and pay – will display the:
-   Name of the cryptocurrencies, Date, Buy/sell option, Quantity, Cost.
+- **Portfolio Viewing**
+  - Users have access to a comprehensive portfolio that displays all their transactions.
+  - Each transaction includes information about the asset name, purchase date, buy/sell option, quantity, and cost.
 
-Transaction should be update in portfolio accordingly (store user portfolio information).
-c) The ‘Portfolio Viewing’ option will display list of all transaction. Where each transaction will
-contain:
-a. Name of the cryptocurrencies,
-b. Date of purchasing:
-c. Buy/sell option:
-d. Quantity:
-e. Cost:
+### Server-Side Functionalities
+- **User Account Management**
+  - User account information is updated upon account creation.
+  - Secure storage of user account details in the MySQL database.
 
-Description of server data storage:
-a) user account information will be updated after user will be created.
-b) user portfolio information will be update after each transaction as well as all trades will be
-retrieved and display on ‘Portfolio Viewing’ option.
-c) price information will be retrieving each time user open invest now option.
+- **Portfolio Management**
+  - User portfolio information is updated after each transaction.
+  - All trades are retrieved and displayed in the 'Portfolio Viewing' option, providing users with a complete view of their investments.
+
+- **Real-Time Data**
+  - The system continuously scrapes real-time prices from reputable sources:
+    - Cryptocurrencies: [coinranking.com](https://coinranking.com/)
+    - Gold: [finance.yahoo.com](https://finance.yahoo.com/quote/GC%3DF?p=GC%3DF)
+    - Silver: [finance.yahoo.com](https://finance.yahoo.com/quote/SI%3DF?p=SI%3DF)
+
+## Technology Stack
+- **GUI Design:** The project features a user-friendly GUI for intuitive navigation.
+- **MySQL Database:** Securely stores user account and portfolio data.
+- **Python:** Powers the core functionality of the project, including real-time data scraping and database integration.
+
+## System Architecture
+The project's logical architecture is elegantly represented in the UML diagram provided, offering a comprehensive view of the system's design and functionality.
+
+## Getting Started
+To get started with Crypto Exchange, ensure you have Python and MySQL set up on your system. Refer to the project's documentation for detailed installation and configuration instructions.
